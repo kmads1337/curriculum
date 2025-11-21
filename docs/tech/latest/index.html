@@ -16,25 +16,17 @@
   <div class="spinner"></div>
   <span>Loading CV…</span>
 </div>
-<script>
-const USER = "kmads1337";
-const REPO = "curriculum";
-const BRANCH = "main";
-const PATH  = "docs/curriculum/tech/assets/cv.pdf";
 
-fetch(`https://raw.githubusercontent.com/${USER}/${REPO}/${BRANCH}/${PATH}`)
-  .then(r => {
-    if(!r.ok) throw new Error("CV not found.");
-    const embed = document.createElement("embed");
-    embed.src = r.url;
-    embed.type = "application/pdf";
-    document.body.innerHTML = "";
-    document.body.appendChild(embed);
-  })
-  .catch(() => {
-    document.body.innerHTML =
-      "<p style='color:white;text-align:center;padding:20px;'>Error loading CV.</p>";
-  });
+<script>
+const pdfUrl = "/curriculum/curriculum/tech/assets/cv.pdf";
+const embed = document.createElement("embed");
+embed.src = pdfUrl;
+embed.type = "application/pdf";
+embed.style.width = "100%";
+embed.style.height = "100vh";
+document.body.innerHTML = "";
+document.body.appendChild(embed);
 </script>
+
 </body>
 </html>
