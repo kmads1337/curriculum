@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Latest CV</title>
+<title>Kaique Souza - Curriculum</title>
 <style>
   html,body{margin:0;height:100%;background:#111;color:#eee;font-family:Arial, sans-serif;}
   .loader{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;}
@@ -12,21 +12,20 @@
 </style>
 </head>
 <body>
-<div class="loader">
-  <div class="spinner"></div>
-  <span>Loading CV…</span>
-</div>
+  <div class="loader">
+    <div class="spinner"></div>
+    <span>Loading CV…</span>
+  </div>
 
-<script>
-const pdfUrl = "/curriculum/tech/assets/cv.pdf";
-const embed = document.createElement("embed");
-embed.src = pdfUrl;
-embed.type = "application/pdf";
-embed.style.width = "100%";
-embed.style.height = "100vh";
-document.body.innerHTML = "";
-document.body.appendChild(embed);
-</script>
-
+  <script>
+  const pdfUrl = "/curriculum/tech/assets/cv.pdf";
+  const embed = document.createElement("embed");
+  embed.src = pdfUrl;
+  embed.type = "application/pdf";
+  embed.style.width = "100%";
+  embed.style.height = "100vh";
+  document.body.innerHTML = "";
+  document.body.appendChild(embed);
+  </script>
 </body>
 </html>
