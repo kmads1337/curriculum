@@ -29,7 +29,7 @@ function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({ '&':'&amp;','
 /* fallback: get last commit date for a file */
 async function getLastCommitDate(filePath){
     // commits API: latest commit for a path
-    const url = `https://api.github.com/repos/${USER}/${REPO}/commits?path=${encodeURIComponent(filePath)}&per_page=1`;
+    const url = `https://api.github.com/repos/${USER_NAME}/${REPOSITORY_NAME}/commits?path=${encodeURIComponent(filePath)}&per_page=1`;
     const res = await fetch(url);
     if(!res.ok) throw new Error(`Commit lookup failed (${res.status})`);
     const j = await res.json();
